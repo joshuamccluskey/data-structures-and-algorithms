@@ -37,7 +37,7 @@ const addOne = (arr) => {
   // var : arr.map (num => num + 1);
   // return: var
 
-  let addMap = arr.map (num => num +1);
+  let addMap = arr.map (num => num + 1);
 
   return addMap;
 
@@ -77,14 +77,13 @@ const forLoopTwoToThe = (arr) => {
   // input: arr
   // Outputs:1, 16, 32; 0.5, 0.25, 0.125
   // Results: []
-  // forloop Mathpow(num,pow));
+  // forloop: Mathpow(num, arr [i]));
   // return var
 
   let results = [];
 
   for (let i = 0; i < arr.length; i++){
-    let power = i + 1;
-    let powerNum = Math.pow(arr[i], power);
+    let powerNum = Math.pow( 2 , arr[i]);
     results.push(powerNum);
 
   }
@@ -104,7 +103,23 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  // Solution code here Challenge 5
+  // input: arr
+  // Outputs:1, 16, 32; 0.5, 0.25, 0.125
+  // Results: []
+  // foreach: Mathpow(num, arr [i]));
+  // return: results[]
+
+  let results = [];
+
+  arr.forEach(num => {
+    let powerNum = Math.pow( 2, num);
+    results.push(powerNum);
+
+  });
+
+  return results;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,9 +130,15 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
-   // Map sort of worked but the problem calls for a for loop
-  // let powerMap = arr.map (num => Math.pow(num, 2));
-  // return powerMap;
+  // input: arr
+  // Outputs:1, 16, 32; 0.5, 0.25, 0.125
+  // PowerMap: arr Map Math.pow(2, num)
+  // return PowerMap
+
+  let powerMap = arr.map (num => Math.pow(2, num));
+  return powerMap;
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -270,7 +291,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(forLoopTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(forLoopTwoToThe([0, 4, 5]).length).toStrictEqual(3);
@@ -281,7 +302,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(forEachTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(forEachTwoToThe([0, 4, 5]).length).toStrictEqual(3);
@@ -292,7 +313,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(mapTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(mapTwoToThe([0, 4, 5]).length).toStrictEqual(3);
