@@ -17,7 +17,6 @@ const addOne = arr => {
     let sum = element + 1;
     resultsArr.push(sum);
 
-
   });
 
   return resultsArr;
@@ -39,7 +38,6 @@ const addExclamation = (arr) => {
 
     let strings = element + '!';
     resultsArr.push(strings);
-
 
   });
 
@@ -63,10 +61,7 @@ const allUpperCase = (arr) => {
     let string = element.toUpperCase();
     resultsArr.push(string);
 
-
   });
-
-
 
   return resultsArr;
 };
@@ -91,7 +86,7 @@ const greeting = (word) => {
 const speaker = (words, callback) => {
   // Solution code here...
   let stringsArr = [];
-  words.forEach(element =>{
+  words.forEach(element => {
     let callString = callback(element);
     stringsArr.push(callString);
 
@@ -117,11 +112,19 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  // Solution code here Challenge 5
+  arr.push(value);
+
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,7 +146,7 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  // Solution code here
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -199,7 +202,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should add the number 8 to the array five times', () => {
     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
