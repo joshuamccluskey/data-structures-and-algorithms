@@ -90,6 +90,14 @@ const greeting = (word) => {
 
 const speaker = (words, callback) => {
   // Solution code here...
+  let stringsArr = [];
+  words.forEach(element =>{
+    let callString = callback(element);
+    stringsArr.push(callString);
+
+  });
+
+  return stringsArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
