@@ -192,7 +192,7 @@ const fizzbuzz = (arr) => {
       fizzPop.push('Fizz');
     } else if (element % 5 === 0) {
       fizzPop.push('Buzz');
-    }else {
+    } else {
       fizzPop.push(element);
     }
   });
