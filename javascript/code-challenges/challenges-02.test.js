@@ -29,7 +29,7 @@ const raisedToTheThird = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1. 
+Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
@@ -37,7 +37,7 @@ const addOne = (arr) => {
   // var : arr.map (num => num + 1);
   // return: var
 
-  let addMap = arr.map (num => num + 1);
+  let addMap = arr.map(num => num + 1);
 
   return addMap;
 
@@ -55,7 +55,7 @@ const addQuestion = (arr) => {
   // var : arr.map (string => string + "?");
   // return var
 
-  let concantMap = arr.map (str => str + '?');
+  let concantMap = arr.map(str => str + '?');
 
   return concantMap;
 
@@ -75,24 +75,21 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 const forLoopTwoToThe = (arr) => {
   // Solution code here Challenge 4
   // input: arr
-  // Outputs:1, 16, 32; 0.5, 0.25, 0.125
+  // Outputs: 67, 111, 100, 101, 51, 48, 49
   // Results: []
-  // forloop: Mathpow(num, arr [i]));
+  //  Mathpow(num, arr [i]));
   // return var
 
   let results = [];
 
-  for (let i = 0; i < arr.length; i++){
-    let powerNum = Math.pow( 2 , arr[i]);
+  for (let i = 0; i < arr.length; i++) {
+    let powerNum = Math.pow(2, arr[i]);
     results.push(powerNum);
 
   }
 
   return results;
 
-
-
- 
 
 };
 
@@ -113,7 +110,7 @@ const forEachTwoToThe = (arr) => {
   let results = [];
 
   arr.forEach(num => {
-    let powerNum = Math.pow( 2, num);
+    let powerNum = Math.pow(2, num);
     results.push(powerNum);
 
   });
@@ -135,7 +132,7 @@ const mapTwoToThe = (arr) => {
   // PowerMap: arr Map Math.pow(2, num)
   // return PowerMap
 
-  let powerMap = arr.map (num => Math.pow(2, num));
+  let powerMap = arr.map(num => Math.pow(2, num));
   return powerMap;
 
 
@@ -153,6 +150,14 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
+  // input: arr
+  // Outputs: 67, 111, 100, 101, 51, 48, 49
+  // Do the strMap with charCodeAt() don't pass the index arguement
+  // return StrMap
+
+  let strMap = arr.map(str => str.charCodeAt());
+
+  return strMap;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -166,7 +171,27 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
+  // Solution code here..
+  //input: arr of values
+  //output: 'odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd', 'N/A'
+  // Map: numMap arr. map num => Number
+  // Use ternary conditional remainder operator === 0 is even : odd
+  // Use conditional isNaN(num)
+  // reuturn numMap
+
+  let numMap = arr.map(num => {
+
+    if (isNaN(num)) {
+      return 'N/A';
+    } else {
+      return num % 2 === 0 ? 'even' : 'odd';
+    }
+  });
+
+  return numMap;
+
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -324,31 +349,31 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return an array containing the character code for each letter', () => {
-    expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([ 67, 111, 100, 101, 51, 48, 49 ]);
+    expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([67, 111, 100, 101, 51, 48, 49]);
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return an array containing the keys from an object', () => {
-    expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual([ 'odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd' ]);
+    expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual(['odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd']);
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541]).length).toStrictEqual(8);
   });
 
   test('It should work with all odd numbers', () => {
-    expect(evenOdd([1, 3, 5, 7, 9])).toStrictEqual([ 'odd', 'odd', 'odd', 'odd', 'odd' ]);
+    expect(evenOdd([1, 3, 5, 7, 9])).toStrictEqual(['odd', 'odd', 'odd', 'odd', 'odd']);
     expect(evenOdd([1, 3, 5, 7, 9]).length).toStrictEqual(5);
   });
 
   test('It should work with all even numbers', () => {
-    expect(evenOdd([2, 4, 6, 8, 10])).toStrictEqual([ 'even', 'even', 'even', 'even', 'even' ]);
+    expect(evenOdd([2, 4, 6, 8, 10])).toStrictEqual(['even', 'even', 'even', 'even', 'even']);
     expect(evenOdd([2, 4, 6, 8, 10]).length).toStrictEqual(5);
   });
 
   test('It should return the string "N/A" if a non-number is included in the array', () => {
-    expect(evenOdd([5, 8, 2, 'hi'])).toStrictEqual([ 'odd', 'even', 'even', 'N/A' ]);
+    expect(evenOdd([5, 8, 2, 'hi'])).toStrictEqual(['odd', 'even', 'even', 'N/A']);
     expect(evenOdd([5, 8, 2, 'hi']).length).toStrictEqual(4);
   });
 });
