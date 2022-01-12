@@ -149,7 +149,7 @@ const createList = (availableItems) => {
   // Solution code here Challenge 6
   let groceryList = [];
   availableItems.forEach(element => {
-    if (element.available === true){
+    if (element.available === true) {
       groceryList.push(element.name);
     }
   });
@@ -172,7 +172,33 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  //Credit: Psuedo code help from Kevin Lamarca
+  // input: array of nums
+  // output: new arr
+  // declare new arr
+  // for each on els of arr
+  // conditional checks
+  // if el % 3 === 0 && el % 5 === 0 push 'Fizz Buzz'
+  // else if el % 3 === 0 push 'Fizz'
+  // else if el % 5 === 0 push 'Buzz'
+  // else push el
+  // return new arr
+
+  let fizzPop = [];
+  arr.forEach(element => {
+    if (element % 3 === 0 && element % 5 === 0) {
+      fizzPop.push('Fizz Buzz');
+    } else if (element % 3 === 0) {
+      fizzPop.push('Fizz');
+    } else if (element % 5 === 0) {
+      fizzPop.push('Buzz');
+    }else {
+      fizzPop.push(element);
+    }
+  });
+
+  return fizzPop;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -226,7 +252,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
