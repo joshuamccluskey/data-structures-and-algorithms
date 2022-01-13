@@ -154,6 +154,14 @@ const snorlaxData = {
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
   // Input: arr
+  // Output: arr of ability names greater than the integer passed in arr
+  // Var: fitler names if ability is greater than minBaseStat
+
+  let snoreStats = arr.filter(element => element.baseStat > minBaseStat ? element.stat.name : false);
+
+  return snoreStats;
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
