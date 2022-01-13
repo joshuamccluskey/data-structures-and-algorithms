@@ -100,7 +100,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
-  // Input: forbiddenValues, arr 
+  // Input: forbiddenValues, arr
   // Output: [Not in the array]
   // Var : filter use
   // filter the longer array arr[] first which is the second arr passed
