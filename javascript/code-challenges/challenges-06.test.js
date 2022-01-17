@@ -130,13 +130,13 @@ const append = (arr1, arr2) => arr2.forEach(num => arr1.push(num));
 
 /* ------------------------------------------------------------------------------------------------
   TESTS
-  
+
   All the code below will verify that your functions are working to solve the challenges.
-  
+
   DO NOT CHANGE any of the below code.
-  
+
   Run your tests from the console: jest challenges-02.test.js
-  
+
   ------------------------------------------------------------------------------------------------ */
 
 describe('Testing challenge 1', () => {
