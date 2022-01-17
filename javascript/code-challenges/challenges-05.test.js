@@ -11,9 +11,19 @@ should convert to ["Jane Doe", "James Bond"]
 Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
-const toLastNames = people => {
-  // Solution code here...
-};
+const toLastNames = people => people.map(el => el.firstName + ' ' + el.lastName);
+// Solution code here...
+// Input: arr people
+// Output: Combined Strings array
+// Map: Each Element
+// Concant each value
+// Return: Contcanted objects
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -22,9 +32,9 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr) => arr.reduce((acc, currEl) => acc += currEl , 0) ;
+const addValues = (arr) => arr.reduce((bucket, currEl) => bucket += currEl, 0);
 // Solution code here...
-//Input: arr numbers
+// Input: arr numbers
 // Output: the sume of arr numbers
 // REduce.method
 
@@ -40,7 +50,7 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 ------------------------------------------------------------------------------------------------ */
 
-const addPurchases = (arr) => arr.reduce((acc, currEl) => acc += currEl.purchasePrice , 0);
+const addPurchases = (arr) => arr.reduce((bucket, currEl) => bucket += currEl.purchasePrice, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -55,7 +65,7 @@ const countNumberOfElements = (arr) => {
 
   let mapArr = arr.map(el => el = 1);
 
-  return mapArr.reduce((acc, currNum) => acc += currNum, 0);
+  return mapArr.reduce((bucket, currNum) => bucket += currNum, 0);
 
 };
 
@@ -83,7 +93,8 @@ let starWarsData = [{
   skin_color: 'gold',
   eye_color: 'yellow',
   birth_year: '112BBY',
-  gender: 'n/a'},
+  gender: 'n/a'
+},
 {
   name: 'R2-D2',
   height: '96',
@@ -117,6 +128,16 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  // input: arr
+  // output: arr of names
+  // Reduce each name of element.
+
+  return arr.reduce((acc, currVal) => {
+    acc.push(currVal.name);
+    return acc;
+  }, []);
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,6 +150,21 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  // input: str
+  // output: reverse string letters
+  // Split string Method
+  // Declare new array
+  // For loop decrementing i = str.length; i >= 0 ; i--
+  // Push into new array
+  // Map to concant the reversed str
+
+  let strSplit = str.split('');
+  let reverseArr = [];
+  for (let i = strSplit.length-1; i >= 0; i--) {
+    reverseArr.push(strSplit[i]);
+  }
+  return reverseArr.reduce((acc, currVal) => acc += currVal);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -284,7 +320,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-09.test.js
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should convert object to full name string', () => {
 
     const people = [{ firstName: 'Jane', lastName: 'Doe' }, { firstName: 'James', lastName: 'Bond' }];
@@ -304,7 +340,7 @@ describe('Testing challenge 2', () => {
 
 describe('Testing challenge 3', () => {
   test('It should add the purchase price', () => {
-    expect(addPurchases([{item: 'switch', purchasePrice: 399}, {item: 'toothpaste', purchasePrice: 2}])).toStrictEqual(401);
+    expect(addPurchases([{ item: 'switch', purchasePrice: 399 }, { item: 'toothpaste', purchasePrice: 2 }])).toStrictEqual(401);
     expect(addPurchases([])).toStrictEqual(0);
   });
 });
@@ -315,14 +351,14 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return an array continaing the names of the characters', () => {
-    expect(returnNames(starWarsData)).toStrictEqual([ 'Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa' ]);
+    expect(returnNames(starWarsData)).toStrictEqual(['Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa']);
     expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return the string with the characters in reverse order', () => {
     expect(reversedString('Code 301')).toStrictEqual('103 edoC');
   });
@@ -336,7 +372,7 @@ xdescribe('Testing challenge 7', () => {
 
 xdescribe('Testing challenge 8', () => {
   test('It should return the average of the numbers in the array', () => {
-    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
+    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85])).toStrictEqual(64);
   });
 });
 
@@ -354,7 +390,7 @@ xdescribe('Testing challenge 10', () => {
 
 xdescribe('Testing challenge 11', () => {
   test('It should return an array containing the names of the children', () => {
-    expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
+    expect(extractChildren(characters)).toStrictEqual(['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras']);
     expect(extractChildren(characters).length).toStrictEqual(10);
   });
 });
