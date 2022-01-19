@@ -75,6 +75,7 @@ const howMuchPencil = (str) => {
   // input str
   // output: Array of elements characters removed
   // for loop
+  // slice(0)
   // result.push (str)
 
   let result = [];
@@ -147,7 +148,13 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  // input:  recipe
+  // Output name in each string
+  // var = objslice()
+  // push(var)
+
+
+
   return result;
 };
 
@@ -176,6 +183,8 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 ------------------------------------------------------------------------------------------------ */
 
 const stepActions = (recipe) => {
+
+
   let result = [];
   // Solution code here...
   return result;
