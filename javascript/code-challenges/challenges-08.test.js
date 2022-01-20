@@ -54,8 +54,9 @@ let characters = [
   }
 ];
 
-// const sortByChildren = (charArray) => charArray.sort((a, b) a.children.length - b.children.length);
-// Solution code here...
+const sortByChildren = charArray => charArray.sort((a, b) => a.children.length - b.children.length);
+
+
 
 
 
@@ -109,10 +110,8 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
 
-  let puncReplace = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'');
-  // let re = /(\b[A-Z][a-z]+|\b[a-z]\b)/g;
-  puncReplace.filter(el => /^[A-Z]/.test(el));
-  return puncReplace.match(re);
+  let re = /[A-Z][a-z]*/g
+  return str.match(re) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,7 +121,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+
+  let re = /^[A-J]/;
+  return arr.filter(city => re.test(city));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -198,7 +199,7 @@ Run your tests from the console: jest challenges-04.solution.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
     expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
@@ -243,7 +244,7 @@ describe('Testing challenge 4', () => {
   });
 })
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should only return words that begin with a capital letter', () => {
     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
 
@@ -256,7 +257,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
 
   test('It should return the cities whose names begin with the letters A through J', () => {
