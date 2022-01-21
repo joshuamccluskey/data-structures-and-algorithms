@@ -15,7 +15,7 @@ function returnTen(str){
   let splitStr = str.split('');
   let spliceStr = splitStr.splice(str.length-11);
 
-  return spliceStr;
+  return spliceStr;;
 
 
 }
