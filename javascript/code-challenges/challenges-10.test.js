@@ -9,7 +9,10 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str) {
   // Solution code here...
-  let re = /.{10}$/gm;
+  let slice = str.slice(-10);
+  let result = slice.split('');
+
+  return result;
 
 }
 
@@ -237,7 +240,7 @@ Run your tests from the console: jest challenge-12.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('it should return the last 10 characters of a string as an array', () => {
     expect(returnTen('hello world')).toStrictEqual(['e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']);
     expect(returnTen('world')).toStrictEqual(['w', 'o', 'r', 'l', 'd']);
