@@ -10,7 +10,12 @@ Write a function named screenForNames that takes in an array of strings and uses
 
 ------------------------------------------------------------------------------------------------ */
 
-const screenForNames = (arr) => {};
+const screenForNames = (arr) => {
+  let re = /^(Mr\.|Mrs\.|Ms\.|Dr\.)\s[A-Za-z]+/gm;
+
+  return arr.filter(str => re.test(str));
+};
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,9 +26,7 @@ Write a function named toTitleCase that takes in an array of strings and returns
 For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyver'].
 ------------------------------------------------------------------------------------------------ */
 
-const toTitleCase = (arr) => {
-  // Solution code here...
-};
+const toTitleCase = (arr) => arr.map(str => str.charAt(0).toUppercase() + str.substring(1));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
