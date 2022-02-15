@@ -6,6 +6,8 @@
 
 ### Challenge 01
 
-Location: `codechallenges/linkedlist/LinkedListChallenges`
+Link: [Challenge 1](challenge-1/README.md)
 
-Method: `linkedListChallenge06()`
+Method: `reverseArray`
+
+Work Time: 50 minutes
