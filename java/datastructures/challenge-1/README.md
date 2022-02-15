@@ -6,4 +6,4 @@
 
 #### Work Time: 50 Mintues
 
-![Whiteboard Array Reverse](/datastructures/challenge-1/img/array-reverse.png)
+![Whiteboard Array Reverse](img/array-reverse.png)
