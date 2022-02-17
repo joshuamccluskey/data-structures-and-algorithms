@@ -19,3 +19,11 @@ Link: [Challenge 2](challenge-2/README.md)
 Method: `insertMiddle`
 
 Work Time: 50 minutes
+
+### Challenge 03
+
+Link: [Challenge 3](challenge-3/README.md)
+
+Method: `binarySearch`
+
+Work Time: 2 hours
