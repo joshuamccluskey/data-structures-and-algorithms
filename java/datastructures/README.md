@@ -27,3 +27,11 @@ Link: [Challenge 3](challenge-3/README.md)
 Method: `binarySearch`
 
 Work Time: 2 hours
+
+### Challenge 04
+
+Link: [Challenge 4](challenge-4/README.md)
+
+Method: `sumArrArr`
+
+Work Time: 2 hours
