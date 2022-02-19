@@ -8,7 +8,7 @@ public class LinkedListTest
 {
   @Test void testAMethod()
     {
-      LinkedList sut = new LinkedList();
+      LinkedList<Number> sut = new LinkedList<Number>();
       System.out.println(sut);
       assertTrue(true);
     }
