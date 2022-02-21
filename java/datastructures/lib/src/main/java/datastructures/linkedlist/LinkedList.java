@@ -2,20 +2,30 @@ package datastructures.linkedlist;
 
 
 public class LinkedList{
-  Node head = new Node(1);
-  Node tail = new Node(2);
+  Node head = null;
+  Node tail = null;
 
 
 
   public void insert (int num){
-    Node midNode = new Node(num);
-  
-
+    Node nodeNew = new Node(num);
+    if (head != null) {
+      nodeNew.next = head;
+    } else {
+      head = nodeNew;
+    }
 
 }
 
 public boolean includes (int num){
-
+  Node curr = head;
+  while (curr != null) {
+    if(curr.val == num){
+      return true;
+    }
+    curr = curr.next;
+  }
+  return false;
 }
 
 
@@ -24,7 +34,7 @@ public boolean includes (int num){
   public String toString() {
     return "{ " +
       head +
-      " } -> { " + var  + " } -> { " + tail +
+      " } -> { " + head.next  + " } -> { " + tail +
       "} -> NULL";
   }
 }

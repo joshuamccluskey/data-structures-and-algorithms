@@ -6,10 +6,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LinkedListTest
 {
-  @Test void testAMethod()
+  @Test void test_insert()
     {
-      LinkedList<Number> sut = new LinkedList<Number>();
-      System.out.println(sut);
+      LinkedList sut = new LinkedList();
+      sut.insert(1);
       assertTrue(true);
     }
+  @Test void test_contains()
+  {
+    LinkedList sut = new LinkedList();
+    sut.includes(1);
+    assertTrue(true);
+  }
 }
