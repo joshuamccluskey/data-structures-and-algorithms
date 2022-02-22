@@ -35,3 +35,11 @@ Link: [Challenge 4](challenge-4/README.md)
 Method: `sumArrArr`
 
 Work Time: 2 hours
+
+### Challenge 06
+
+Link: [Challenge 6](challenge-6/README.md)
+
+Method: `insertAfter``insertBefore``append`
+
+Work Time: 2 hours

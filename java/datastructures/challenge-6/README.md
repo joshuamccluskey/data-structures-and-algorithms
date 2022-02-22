@@ -14,4 +14,4 @@ Each method creates a new node with the methods parameter value passed when call
 
 The Big O for time O(1) and the space is O(n).
 
-#### Work Time: 30 minutes
+#### Work Time: 2 hours
