@@ -10,12 +10,21 @@ public class LinkedListTest
     {
       LinkedList sut = new LinkedList();
       sut.insert(1);
-      assertTrue(true);
+      sut.insert(2);
+      sut.insert(3);
+      sut.toString();
+      assertTrue(true, "Yo you need to look at insert()");
     }
   @Test void test_contains()
   {
     LinkedList sut = new LinkedList();
     sut.includes(1);
-    assertTrue(true);
+    assertTrue(true, "Yo you need to look at contains()");
   }
+  @Test void test_toString()
+ {
+  LinkedList sut = new LinkedList();
+  sut.toString();
+  assertTrue(true, "Yo you need to look at toString()");
+ }
 }
