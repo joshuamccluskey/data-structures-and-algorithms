@@ -54,7 +54,7 @@ Work Time: 2 hours
 
 ### Challenge 08
 
-Link: [Challenge 7](challenge-7/README.md)
+Link: [Challenge 8](challenge-8/README.md)
 
 Method: `zip`
 
