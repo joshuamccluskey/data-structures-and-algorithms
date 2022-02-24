@@ -43,3 +43,11 @@ Link: [Challenge 6](challenge-6/README.md)
 Method: `insertAfter``insertBefore``append`
 
 Work Time: 2 hours
+
+### Challenge 07
+
+Link: [Challenge 7](challenge-7/README.md)
+
+Method: `kthFromEnd`
+
+Work Time: 2 hours

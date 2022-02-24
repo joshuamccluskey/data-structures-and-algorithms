@@ -6,7 +6,7 @@ Without using built-in java methods, build a binary search of sorted array and r
 
 ### White Board Process
 
-![Whiteboard Array Reverse](img/array-binary-search.png)
+![Whiteboard Array Binary search](img/array-binary-search.png)
 
 ## Approach & Efficiency
 

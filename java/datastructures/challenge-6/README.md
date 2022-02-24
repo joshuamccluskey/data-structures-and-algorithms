@@ -6,7 +6,7 @@ Without using built-in java methods, create a linked list and insert a node befo
 
 ### White Board Process
 
-![Whiteboard Array Reverse](img/linked-list-insertions.png)
+![Whiteboard linked list insertions](img/linked-list-insertions.png)
 
 ## Approach & Efficiency
 

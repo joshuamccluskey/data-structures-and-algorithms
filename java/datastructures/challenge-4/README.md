@@ -6,7 +6,7 @@ Without using built-in java methods, add the sum of all values of the arrays
 
 ### White Board Process
 
-![Whiteboard Array Reverse](img/sumArrArr.png)
+![Whiteboard Array Sum 2d array](img/sumArrArr.png)
 
 ## Approach & Efficiency
 

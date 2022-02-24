@@ -6,7 +6,7 @@ Without using built-in java methods, insert a new element in an array.
 
 ### White Board Process
 
-![Whiteboard Array Reverse](img/array-insert-shift.png)
+![Whiteboard Array insert shit](img/array-insert-shift.png)
 
 ## Approach & Efficiency
 
