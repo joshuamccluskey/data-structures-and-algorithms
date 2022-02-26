@@ -56,7 +56,16 @@ Work Time: 2 hours
 
 Link: [Challenge 8](challenge-8/README.md)
 
+Method: `pop; push; enqueue; dequeue ;peek; isEmpty`
+
+Work Time: 1.5 hours
+
+### Challenge 08
+
+Link: [Challenge 10](challenge-10/README.md)
+
 Method: `zip`
 
 Work Time: 1.5 hours
+
 
