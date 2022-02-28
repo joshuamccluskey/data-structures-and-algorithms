@@ -5,6 +5,8 @@ package datastructures.linkedlist;
 // Worked and collaborated with Tony Regalado on 02/27/2022 7:00pm
 // Referenced:  https://www.javatpoint.com/java-program-to-create-and-display-a-singly-linked-list
 
+
+
 public class LinkedList<T> {
   // Creating head and tail nodes
   Node head = null;
@@ -92,18 +94,23 @@ public class LinkedList<T> {
 
   public <T> Object kthFromEnd(int k) {
     Node<T> curr = head;
-    while (curr != null) {
-      curr = curr.next;
-      counter++;
-    }
-    if (counter >= k) {
-      curr = head;
-      for (int i = 0; i < counter - k; i++) {
-        curr = curr.next;
-      }
 
+    try {
+      while (curr != null) {
+        curr = curr.next;
+        counter++;
+      }
+      if (counter >= k) {
+        curr = head;
+        for (int i = 0; i < counter - k; i++) {
+          curr = curr.next;
+        }
+      }return curr.value;
+    }catch (NullPointerException npe){
+      System.out.println("Yo you're k value is out of bounds for this linked list!");
+      npe.printStackTrace();
     }
-    return curr.value;
+    return false;
   }
 
 //   public static void zip (LinkedList linkedList1){

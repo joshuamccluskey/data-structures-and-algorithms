@@ -3,10 +3,7 @@ package datastructures.linkedlist;
 
 import org.junit.jupiter.api.Test;
 
-
-import static datastructures.linkedlist.LinkedList.zip;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest
 {
@@ -62,8 +59,18 @@ public class LinkedListTest
     sut.insert(2);
     sut.insert(3);
     sut.insertBefore(4,2);
-    System.out.println("test_insertBefore: " + sut);
+    System.out.println("test_insertBefore(): " + sut);
     assertEquals("{ 3 } -> { 4 } -> { 2 } -> { 1 } ->  NULL", sut.toString());
+  }
+
+  @Test void test_insertBefore_FirstNode() {
+    LinkedList<Integer> sut = new LinkedList<>();
+    sut.insert(1);
+    sut.insert(2);
+    sut.insert(3);
+    sut.insertBefore(4,3);
+    System.out.println("test_insertBeforeBefore_FirstNode(): " + sut);
+    assertEquals("{ 4 } -> { 3 } -> { 2 } -> { 1 } ->  NULL", sut.toString());
   }
 
   @Test void test_insertAfter() {
@@ -76,22 +83,55 @@ public class LinkedListTest
     assertEquals("{ 3 } -> { 2 } -> { 4 } ->  NULL", sut.toString());
   }
 
-  @Test void test_insertAfter_two() {
+  @Test void test_insertAfter_LastNode() {
     LinkedList<Integer> sut = new LinkedList<>();
     sut.insert(2);
     sut.insert(3);
-    sut.insertAfter(4,3);
-    System.out.println("test_insertAfter_two(): " + sut);
-    assertEquals("{ 3 } -> { 4 } -> { 2 } ->  NULL", sut.toString());
+    sut.insertAfter(4,2);
+    System.out.println("test_insertAfte_LastNode(): " + sut);
+    assertEquals("{ 3 } -> { 2 } -> { 4 } ->  NULL", sut.toString());
   }
 
-  @Test void test_kthFromEnd() {
+  @Test void test_kthFromEnd_lengthGreater() {
+    LinkedList<Integer> sut = new LinkedList<>();
+    sut.insert(1);
+    sut.insert(2);
+    sut.insert(3);
+    sut.insert(8);
+    sut.kthFromEnd(5);
+    assertFalse(false, "Yo you need to look at to test_kthFromEnd_lengthGreater()");
+  }
+    @Test void test_kthFromEnd_negativeInteger() {
+    LinkedList<Integer> sut = new LinkedList<>();
+    sut.insert(1);
+    sut.insert(2);
+    sut.insert(3);
+    sut.insert(8);
+    sut.kthFromEnd(-1);
+    assertFalse(false, "Yo you need to look at to test_kthFromEnd_negativeInteger() ");
+  }
+  @Test void test_kthFromEnd_lengthSame() {
     LinkedList<Integer> sut = new LinkedList<>();
     sut.insert(1);
     sut.insert(2);
     sut.insert(3);
     sut.insert(8);
     assertEquals(8, sut.kthFromEnd(4));
+  }
+
+  @Test void test_kthFromEnd_sizeOfOne() {
+    LinkedList<Integer> sut = new LinkedList<>();
+    sut.insert(1);
+    assertEquals(1, sut.kthFromEnd(1));
+  }
+
+  @Test void test_kthFromEnd_happyPath() {
+    LinkedList<Integer> sut = new LinkedList<>();
+    sut.insert(1);
+    sut.insert(2);
+    sut.insert(3);
+    sut.insert(8);
+    assertEquals(2, sut.kthFromEnd(2));
   }
 
 //  @Test void test_zip() {
