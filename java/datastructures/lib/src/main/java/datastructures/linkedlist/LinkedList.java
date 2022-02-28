@@ -106,20 +106,20 @@ public class LinkedList<T> {
     return curr.value;
   }
 
-   public static void zip (LinkedList linkedList1){
-    Node previousNode = head;
-    Node currNode2 = linkedList1.head;
-
-    while (previousNode != null && currNode2 != null){
-      previousNode.next = currNode2.next;
-      currNode2.next = previousNode;
-
-      previousNode = previousNode.next;
-      currNode2 = currNode2.next;
-
-      linkedList2.head =currNode2;
-    }
-  }
+//   public static void zip (LinkedList linkedList1){
+//    Node previousNode = head;
+//    Node currNode2 = linkedList1.head;
+//
+//    while (previousNode != null && currNode2 != null){
+//      previousNode.next = currNode2.next;
+//      currNode2.next = previousNode;
+//
+//      previousNode = previousNode.next;
+//      currNode2 = currNode2.next;
+//
+//      linkedList2.head =currNode2;
+//    }
+//  }
 
 
   @Override

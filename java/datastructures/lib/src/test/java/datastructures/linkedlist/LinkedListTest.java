@@ -94,21 +94,21 @@ public class LinkedListTest
     assertEquals(8, sut.kthFromEnd(4));
   }
 
-  @Test void test_zip() {
-    LinkedList<Integer> linkedList1 = new LinkedList<>();
-    linkedList1.insert(1);
-    linkedList1.insert(2);
-    linkedList1.insert(3);
-    linkedList1.insert(8);
-    LinkedList<Integer> linkedList2 = new LinkedList<>();
-    linkedList2.insert(1);
-    linkedList2.insert(2);
-    linkedList2.insert(3);
-
-
-    zip(linkedList1, linkedList2);
-//    assertEquals(8, sut.kthFromEnd(4));
-  }
+//  @Test void test_zip() {
+//    LinkedList<Integer> linkedList1 = new LinkedList<>();
+//    linkedList1.insert(1);
+//    linkedList1.insert(2);
+//    linkedList1.insert(3);
+//    linkedList1.insert(8);
+//    LinkedList<Integer> linkedList2 = new LinkedList<>();
+//    linkedList2.insert(1);
+//    linkedList2.insert(2);
+//    linkedList2.insert(3);
+//
+//
+//    zip(linkedList1, linkedList2);
+////    assertEquals(8, sut.kthFromEnd(4));
+//  }
 
   @Test void test_toString()
  {
