@@ -11,23 +11,16 @@ public class LinkedList {
 
 
   public void insert(int num) {
-    Node nodeNew = new Node(num);
-
-    if (head == null) {
-      head = nodeNew;
-    } else {
-      tail.next = nodeNew;
-
-    }
-    tail = nodeNew;
-
-
+    Node newNode = new Node(num);
+    newNode.next = head;
+    head = newNode;
   }
+
 
   public boolean includes(int num) {
     Node curr = head;
     while (curr != null) {
-      if (curr.val == num) {
+      if (curr.value == num) {
         return true;
       }
       curr = curr.next;
@@ -46,7 +39,7 @@ public class LinkedList {
     }
     while (curr != null) {
 
-      System.out.println("{ " + curr.val + " } ->");
+      System.out.println("{ " + curr.value + " } ->");
       curr = curr.next;
 
     }
