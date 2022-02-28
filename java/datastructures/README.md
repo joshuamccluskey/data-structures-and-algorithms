@@ -40,7 +40,7 @@ Work Time: 2 hours
 
 Link: [Challenge 6](challenge-6/README.md)
 
-Method: `insertAfter; insertBefore; append`
+Method: `insertAfter``insertBefore``append`
 
 Work Time: 2 hours
 
@@ -51,12 +51,3 @@ Link: [Challenge 7](challenge-7/README.md)
 Method: `kthFromEnd`
 
 Work Time: 2 hours
-
-### Challenge 08
-
-Link: [Challenge 8](challenge-8/README.md)
-
-Method: `zip`
-
-Work Time: 1.5 hours
-

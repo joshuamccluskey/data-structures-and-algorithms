@@ -10,10 +10,8 @@ zip or merge two linked list into one linked list
 
 ## Approach & Efficiency
 
-This approach was swaping the currNode of one list with the other.
-Using the visual of merging into traffic helped a lot.
-Repeat until both list are null.
+This approach all based on the counter and once counter reaches kth node it is complete.
 
-The Big O for time O(n) linear until each node is added 1 by 1  and the space is O(n) linked list growing by one.
+The Big O for time O(n) counting up linear  and the space is O(n) due to recursive method.
 
 #### Work Time: 2 hours
