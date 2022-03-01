@@ -6,7 +6,7 @@ public class Stack<T>
 {
   Node<T> top;
 
-  void push(T value)
+  public void push(T value)
   {
     Node newNode = new Node(value);
     if (top != null) {
@@ -15,14 +15,14 @@ public class Stack<T>
     top = newNode;
   }
 
-  T pop()
+  public T pop()
   {
     T popValue = top.value;
     top = top.next;
     return popValue;
   }
 
-  T peek()
+  public T peek()
   {
     return top.value;
   }
