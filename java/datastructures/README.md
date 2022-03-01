@@ -68,4 +68,10 @@ Method: `pop; push; enqueue; dequeue ;peek; isEmpty`
 
 Work Time: 2.5 hours
 
+### Challenge 11
 
+Link: [Challenge 11](challenge-11README.md)
+
+Method: `pseudoEnqueue; pseudoDequeue`
+
+Work Time: 2 hours
