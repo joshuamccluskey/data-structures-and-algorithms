@@ -2,6 +2,8 @@ package codechallenges.animalshelter;
 
 import datastructures.queue.Queue;
 
+import java.util.ArrayList;
+
 public class AnimalShelter<T> {
 
   Queue<T> animalShelter;
@@ -20,6 +22,34 @@ public class AnimalShelter<T> {
   public void addDog(String name, String breed, int age){
     dog = new Dog(name, breed, age);
     this.animalShelter.enqueue((T) dog);
+  }
+
+  public Queue adoptPreference(Queue<T> animalShelter, Class preference) {
+    Queue newQueue = new Queue();
+
+    while(animalShelter != null){
+      T animal;
+      animal = animalShelter.dequeue();
+      if(preference.equals(animal)){
+        break;
+      }
+      newQueue.enqueue(animal);
+    }
+
+    while(animalShelter != null){
+      T animal;
+      animal = animalShelter.dequeue();
+      newQueue.enqueue(animal);
+    }
+    setAnimalShelter(newQueue);
+  return newQueue;
+  }
+
+  public Queue adopt(Queue<T> animalShelter){
+    T animal;
+    animal = animalShelter.dequeue();
+
+    return animalShelter;
   }
 
   public Queue<T> getAnimalShelter() {
