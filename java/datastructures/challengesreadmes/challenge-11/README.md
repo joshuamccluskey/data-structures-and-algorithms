@@ -7,7 +7,7 @@ create a pseudo queues enqueue methods and dequeue methods.
 
 ### White Board Process
 
-![Whiteboard pseudo queue](./img/stack-queue-pseudo.png)
+![Whiteboard pseudo queue](img/stack-queue-pseudo.png)
 
 ## Approach & Efficiency
 

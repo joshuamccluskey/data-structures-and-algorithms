@@ -27,7 +27,7 @@ public class Stack<T>
     return top.value;
   }
 
-  boolean isEmpty()
+  public boolean isEmpty()
   {
     return ((top == null) ? true : false);
   }

@@ -7,7 +7,7 @@ public class Queue<T>
   Node<T> front;
   Node<T> back;
 
-  void enqueue(T value)
+  public void enqueue(T value)
   {
     Node newNode = new Node(value);
     if (front != null) {
@@ -16,19 +16,19 @@ public class Queue<T>
     front = newNode;
   }
 
-  T dequeue()
+  public T dequeue()
   {
     T deValue = front.value;
     front = front.next;
     return deValue;
   }
 
-  T peek()
+  public T peek()
   {
     return front.value;
   }
 
-  boolean isEmpty()
+ public boolean isEmpty()
   {
     return ((front == null) ? true: false);
   }
