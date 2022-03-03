@@ -83,3 +83,11 @@ Link: [Challenge 12](challengesreadmes/challenge-12/README.md)
 Method: `enqueue; dequeue`
 
 Work Time: 2 hours
+
+### Challenge 12
+
+Link: [Challenge 13](challengesreadmes/challenge-13/README.md)
+
+Method: `validateBrackets`
+
+Work Time: 2 hours
